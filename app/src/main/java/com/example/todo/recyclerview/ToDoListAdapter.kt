@@ -22,7 +22,7 @@ class ToDoListAdapter: ListAdapter<ToDo, ToDoListAdapter.ToDoViewHolder>(diffUti
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ToDoViewHolder {
         val inflater = LayoutInflater.from(parent.context)
-        val binding = ItemTodoBinding.inflate(inflater)
+        val binding = ItemTodoBinding.inflate(inflater, parent, false)
         return ToDoViewHolder(binding)
     }
 

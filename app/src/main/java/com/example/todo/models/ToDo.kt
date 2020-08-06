@@ -1,6 +1,7 @@
 package com.example.todo.models
 
 import androidx.annotation.DrawableRes
+import androidx.annotation.IdRes
 import com.example.todo.R
 
 
@@ -16,6 +17,12 @@ enum class Priority(
         fun of(priorityindex: Int) = when(priorityindex) {
             0 -> HIGH_PRIORITY
             1 -> MEDIUM_PRIORITY
+            else -> LOW_PRIORITY
+        }
+
+        fun from(@IdRes id: Int) = when(id) {
+            R.id.radio_high_priority -> HIGH_PRIORITY
+            R.id.radio_medium_priority -> MEDIUM_PRIORITY
             else -> LOW_PRIORITY
         }
     }
